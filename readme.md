@@ -1,7 +1,8 @@
-## 说明
-本仓库是 [CVPR2022 Biometrics WorkshopPet Biometric Challenge](https://tianchi.aliyun.com/competition/entrance/531952/introduction) A榜Top7 B榜Top2实现代码
 ## 运行
-我们的项目包含9个子项目，分三步运行
+我们的项目包含9个子项目，分三步运行。  
+Step1:生成验证集图像的伪标签（非测试集），目录位于`pseudo_produce`。生成出来的伪标签将在Step2和Step3和训练集一起训练。  
+Step2:使用四个不同的骨干网络Swin-B(224)、Swin-B(384)、effv2-large以及EfficientNet-B7 NS进行训练，分别位于`swin224_stage1`, `swin384_stage1`, `v2_stage1`和`b7ns_stage1`目录。  
+Step3:
 
 ## 环境说明
 GPU型号: RTX3090  
