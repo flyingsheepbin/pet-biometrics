@@ -14,7 +14,7 @@ import os
 
 import albumentations as A
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 class infer_dataset2(Dataset):
     def __init__(self, path):
