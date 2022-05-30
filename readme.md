@@ -1,3 +1,5 @@
+## 介绍
+本仓库是[CVPR2022 Biometrics Workshop Image Forgery Detection Challenge](https://tianchi.aliyun.com/competition/entrance/531954/introduction) Flying Sheep团队的比赛方案，A榜Top7 B榜Top2
 ## 环境说明
 GPU型号: RTX3090  
 CUDA: 11.4  
