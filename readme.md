@@ -3,6 +3,7 @@
 - Step1:生成验证集图像的伪标签（非测试集），目录位于`pseudo_produce`。生成出来的伪标签将在Step2和Step3和训练集一起训练。  
 - Step2:使用四个不同的骨干网络Swin-B(224)、Swin-B(384)、effv2-large以及EfficientNet-B7 NS进行训练，分别位于`swin224_stage1`, `swin384_stage1`, `v2_stage1`和`b7ns_stage1`目录。  
 - Step3:在Step2的基础上继续fine-tuning模型，得到新的四个模型，分别位于`swin224_stage2`, `swin384_stage2`, `v2_stage2` 和`b7ns_stage2`目录。  
+
 我们设计了两种方式执行，一种是直接使用我们已经训练好的第二阶段模型进行推理，它们可以在xxx下载到。只需要执行如下命令    
 `bash predict_ckpt.sh  `
 就会在最外层目录下生成一个融合好的推理结果final_result.csv。  
