@@ -16,7 +16,7 @@ from torch_ema import ExponentialMovingAverage
 
 
 #os.environ['CUDA_VISIBLE_DEVICE'] = '1'
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 scaler = torch.cuda.amp.GradScaler()
