@@ -6,7 +6,7 @@ torch: 1.11.0+cu113
 
 使用pip安装项目所需包  
 ```
-pip install -r requirments
+pip install -r requirments.txt
 ```
 
 
