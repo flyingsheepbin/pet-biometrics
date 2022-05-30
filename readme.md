@@ -26,7 +26,7 @@ pip install -r requirments
 bash predict_ckpt.sh
 ```   
 就会在最外层目录下生成一个融合好的推理结果`final_result.csv`，这个过程几分钟就可以执行完毕。  
-#### b).重头训练  
+#### b).重新训练  
 若要从零开始训练，则需要执行上面说的三步，相同步的内容可以并行执行，而Step1,Step2和Step3则只能顺序执行。我们把这三步用bash脚本写在`train.sh`当中。执行命令如下:  
 ```
 bash train.sh  
@@ -94,7 +94,6 @@ Phase2公布测试集时，我们使用之前最好的模型提交后，发现�
         }
     ```
     
-- AMP、EMA
 
 #### Phase2
 
