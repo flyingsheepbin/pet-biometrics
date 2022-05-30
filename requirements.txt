@@ -1,0 +1,12 @@
+albumentations==1.1.0
+opencv-python==4.5.5.64
+opencv-python-headless==4.5.5.64
+pandas==1.3.5
+Pillow==9.0.1
+PyYAML==6.0
+scikit-image==0.19.2
+timm==0.5.4
+#torch==1.11.0+cu113
+transformers==4.17.0
+thop==0.0.31.post2005241907
+torch-ema==0.3
