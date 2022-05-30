@@ -1,3 +1,5 @@
+## 说明
+本仓库是 [CVPR2022 Biometrics WorkshopPet Biometric Challenge](https://tianchi.aliyun.com/competition/entrance/531952/introduction) A榜TOP7 B榜TOP2实现代码
 ## 运行
 我们的项目包含9个子项目，分三步运行
 
