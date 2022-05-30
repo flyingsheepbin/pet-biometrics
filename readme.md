@@ -17,7 +17,7 @@ torch: 1.11.0+cu113
 
 我们转而尝试用图像检索，参考了Kaggle平台上鲸鱼识别的比赛，选用模型结构为backbone+GEM pooling + Arcface，我们的训练集和验证集的数量比例为4：1，其中验证集由dog id样本数目大于3的样本组成，这个阶段最好成绩为**0.78**，使用的backbone为effnet_B7，我们还参考了谷歌地标建筑物检索比赛中夺冠模型DOLG，使用该模型结构且backbone为B7时取得了**0.82**的线上成绩。我们认为地标建筑物检索和本次狗鼻子检索任务还是有区别的，地标建筑物图片中往往没有很明显的特征，而像人脸识别这类任务中，被检索图片中有很明显的区域特征，我们认为dolg这类局部和全局特征相结合的思路可能并不适合本次竞赛。
 
-我们之后参考了[Combination of Multiple Global Descriptors for Image Retrieve](https://arxiv.org/pdf/1903.10663v3.pdf) 论文中的模型结构，该网络通过拼接多种特征描述符来表示图片的特征向量，所使用的损失函数为**Triplet Loss** + **LabelSmooth Loss,**评价指标是Recall 1，因为有的Dog ID只有两张图片，如果把这类图片划分到不同的集合里，那么就会出现图片完不成匹配的情形，我们索性不划分验证集，用全部图片当作训练集，全部图片当作验证集，此时backbone为b7的情况下，取得了线上**0.824**的成绩，为了继续缩小类内距离，扩大类间距离，我们继续使用arcface训练模型，但线上效果不明显。
+我们之后参考了[Combination of Multiple Global Descriptors for Image Retrieve](https://arxiv.org/pdf/1903.10663v3.pdf) 论文中的模型结构，该网络通过拼接多种特征描述符来表示图片的特征向量，所使用的损失函数为**Triplet Loss** + **LabelSmooth Loss,** 评价指标是Recall 1，因为有的Dog ID只有两张图片，如果把这类图片划分到不同的集合里，那么就会出现图片完不成匹配的情形，我们索性不划分验证集，用全部图片当作训练集，全部图片当作验证集，此时backbone为b7的情况下，取得了线上**0.824**的成绩，为了继续缩小类内距离，扩大类间距离，我们继续使用arcface训练模型，但线上效果不明显。
 
 我们参考了[Supervised Contrastive Learning](https://arxiv.org/pdf/2004.11362.pdf) 这篇论文，将Triplet loss换成了Supcon Loss，线上取得了**0.839**的成绩，我们又尝试完全使用Supcon Loss，此时线上结果为0.846，之后我们选用swin_base_224作为backbone，取得了84.7的成绩。
 
