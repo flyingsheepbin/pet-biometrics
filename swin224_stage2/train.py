@@ -14,7 +14,7 @@ import os
 from torch_ema import ExponentialMovingAverage
 
 #os.environ['CUDA_VISIBLE_DEVICE'] = '1'
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def copy_parameters_to_model(copy_of_model_parameters, model):
     for s_param, param in zip(copy_of_model_parameters, model.parameters()):
