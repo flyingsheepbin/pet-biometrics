@@ -8,7 +8,7 @@
 
 我们设计了两种方式执行。
 #### a).加载训练好的权重推理  
-一种是直接使用我们已经训练好的第二阶段模型进行推理，它们可以在xxx下载到。将下载到的模型权重放入到`./ckpts`目录下即可，然后只需要执行如下命令    
+一种是直接使用我们已经训练好的第二阶段模型进行推理，它们可以在[Google drive](https://drive.google.com/file/d/1aOh3n9Yk6Jjfqcd0ew5_D0_JjbpG7PAc/view?usp=sharing)下载到。将下载到的模型权重放入到`./ckpts`目录下即可，然后只需要执行如下命令    
 ```
 bash predict_ckpt.sh
 ```   
