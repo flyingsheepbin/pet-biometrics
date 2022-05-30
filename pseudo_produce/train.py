@@ -14,7 +14,7 @@ import os
 
 
 #os.environ['CUDA_VISIBLE_DEVICE'] = '1'
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def train(net, optim):
     net.train()
