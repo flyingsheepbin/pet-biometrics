@@ -3,6 +3,7 @@ GPU型号: RTX3090
 CUDA: 11.4  
 Python: 3.7.11  
 torch: 1.11.0+cu113  
+操作系统: Ubuntu 18.04  
 
 使用pip安装项目所需包  
 ```
