@@ -15,7 +15,7 @@ python train.py
 
 # model3: effv2-large
 cd ../v2_stage1
-python train.py -
+python train.py
 
 # model4: swin224
 cd ../swin224_stage1
